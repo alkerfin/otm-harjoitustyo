@@ -1,0 +1,138 @@
+commit a116ffb92d62225e111dc62984eba5d79a2bc0d4
+Author: Aleksi Tanskanen <aleksi.tanskanen@helsinki.fi>
+Date:   Tue Mar 20 22:27:21 2018 +0200
+
+    file1 poistettu, file2 -> file22
+
+ tiedostoja/file1  | 0
+ tiedostoja/file2  | 0
+ tiedostoja/file22 | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit f2354cdaed15949213366c88c7dbe87f29781d5e
+Author: Aleksi Tanskanen <aleksi.tanskanen@helsinki.fi>
+Date:   Tue Mar 20 22:25:09 2018 +0200
+
+    Tiedostot tiedostoja kansioon
+
+ tiedostoja/file1 | 0
+ tiedostoja/file2 | 0
+ tiedostoja/file3 | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit c070d69bb9f595c59914a6b7032a7d205420badd
+Author: Aleksi Tanskanen <aleksi.tanskanen@helsinki.fi>
+Date:   Tue Mar 20 22:24:03 2018 +0200
+
+    Korjaus
+
+ file1 | 0
+ file2 | 0
+ file3 | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit d72d7009f892ca096ec4e8f0d478ca609f61b845
+Author: Aleksi Tanskanen <aleksi.tanskanen@helsinki.fi>
+Date:   Tue Mar 20 22:23:09 2018 +0200
+
+    Kansio tiedostoja
+
+ file1 | 0
+ file2 | 0
+ file3 | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 249fffa2641fda4f57405a2ac6d5efca79924c03
+Author: Aleksi Tanskanen <aleksi.tanskanen@helsinki.fi>
+Date:   Tue Mar 20 22:19:29 2018 +0200
+
+    Muutoksia eka.txt ja toka.txt
+
+ eka.txt    | 2 +-
+ kolmas.txt | 8 ++++++++
+ 2 files changed, 9 insertions(+), 1 deletion(-)
+
+commit ac6999691abaef7aa49915f4fc0e06f7e255a849
+Author: Aleksi Tanskanen <aleksi.tanskanen@helsinki.fi>
+Date:   Tue Mar 20 22:18:06 2018 +0200
+
+    tiedosto.txt -> eka.txt
+
+ eka.txt      | 21 +++++++++++++++++++++
+ tiedosto.txt | 21 ---------------------
+ 2 files changed, 21 insertions(+), 21 deletions(-)
+
+commit 7288f7b1b97cfab2a28cb27b1327854b3ad33dd6
+Author: Aleksi Tanskanen <aleksi.tanskanen@helsinki.fi>
+Date:   Tue Mar 20 22:17:30 2018 +0200
+
+    Toinen poistettu
+
+ toinen.txt | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit 32bcbc948ff3b44b5c0455dda69af0bfadbfb64a
+Author: Aleksi Tanskanen <aleksi.tanskanen@helsinki.fi>
+Date:   Tue Mar 20 22:15:25 2018 +0200
+
+    Poistettu teksitä ja lisätty tiedosto.txt
+
+ tiedosto.txt | 10 ++++++++++
+ 1 file changed, 10 insertions(+)
+
+commit 177dabd5094c7da9b0785a9f37ab646649156e76
+Author: Aleksi Tanskanen <aleksi.tanskanen@helsinki.fi>
+Date:   Tue Mar 20 22:14:36 2018 +0200
+
+    Tekstiä tiedosto.txt
+
+ tiedosto.txt | 12 +++++++++++-
+ 1 file changed, 11 insertions(+), 1 deletion(-)
+
+commit 2f8ee3d8d7b23e524421746c728ae7368ed44cb0
+Author: Aleksi Tanskanen <aleksi.tanskanen@helsinki.fi>
+Date:   Tue Mar 20 21:50:28 2018 +0200
+
+    stuff-kansio ja tiedosto
+
+ stuff/joku_tiedosto | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 17b97aa9e73616f46b89858e285416be7d9ee86b
+Author: Aleksi Tanskanen <aleksi.tanskanen@helsinki.fi>
+Date:   Tue Mar 20 21:49:52 2018 +0200
+
+    Muutokset toinen ja kolmas
+
+ kolmas.txt | 1 +
+ toinen.txt | 1 +
+ 2 files changed, 2 insertions(+)
+
+commit f109bbd58236e7f21cd4bddef82329edcb68b214
+Author: Aleksi Tanskanen <aleksi.tanskanen@helsinki.fi>
+Date:   Tue Mar 20 21:49:07 2018 +0200
+
+    Lisäys
+
+ kolmas.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 43d48a84feac19885193f5cd6a0f64824c1df3e7
+Author: Aleksi Tanskanen <aleksi.tanskanen@helsinki.fi>
+Date:   Tue Mar 20 21:48:04 2018 +0200
+
+    muutos ja lisäys
+
+ tiedosto.txt | 1 +
+ toinen.txt   | 0
+ 2 files changed, 1 insertion(+)
+
+commit dc01afdbf63182f5bf1020f4e73c7fb0ef28e267
+Author: Aleksi Tanskanen <aleksi.tanskanen@helsinki.fi>
+Date:   Tue Mar 20 21:46:46 2018 +0200
+
+    tiedosto.txt luotu
+
+ tiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
