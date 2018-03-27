@@ -10,6 +10,8 @@ Sovelluksen avulla käyttäjä voi hallinoida omia menojaan ja tulojaan. Sovellu
 	- Käyttäjä voi luoda kategorian menolle
 	- Käyttäjä voi tarkistella kuukausimenojaan kategorian perusteella
 
+
 ##Jatkokehitysideoita
+
 	- Automaattinen tulon lisäys kuukaudelle
 	- Menot ja tulot Excel-tiedostoon
