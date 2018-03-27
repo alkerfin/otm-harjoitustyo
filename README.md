@@ -1,7 +1,8 @@
 # Readme
-*Italialainen* teksti saattaa olla liian __paksua__ välillä. 
+Budjetointisovellus
 
-Tähän pitää kirjoittaa oikeasti järkevä readme joku päivä...
+
+[vaatimusmaarittely] ()
 
 [komentorivi.txt](https://github.com/alkerfin/otm-harjoitustyo/blob/master/laskarit/viikko1/komentorivi.txt)
 
