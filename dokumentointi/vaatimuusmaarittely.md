@@ -1,6 +1,6 @@
-#Vaatimusmäärittely
+# Vaatimusmäärittely
 
-##Sovelluksen tarkoitus
+## Sovelluksen tarkoitus
 Sovelluksen avulla käyttäjä voi hallinoida omia menojaan ja tulojaan. Sovellus on yhden käyttäjän työpöytäsovellus.
 
 ## Perusversion tarjoama toiminallisuus
@@ -11,7 +11,7 @@ Sovelluksen avulla käyttäjä voi hallinoida omia menojaan ja tulojaan. Sovellu
 	- Käyttäjä voi tarkistella kuukausimenojaan kategorian perusteella
 
 
-##Jatkokehitysideoita
+## Jatkokehitysideoita
 
 	- Automaattinen tulon lisäys kuukaudelle
 	- Menot ja tulot Excel-tiedostoon
