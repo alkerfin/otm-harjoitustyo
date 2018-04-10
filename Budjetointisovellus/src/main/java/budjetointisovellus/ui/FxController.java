@@ -6,6 +6,7 @@
 package budjetointisovellus.ui;
 
 import budjetointisovellus.domain.Database;
+import budjetointisovellus.domain.Kategoria;
 import budjetointisovellus.domain.KategoriaDao;
 import javafx.event.ActionEvent;
 
