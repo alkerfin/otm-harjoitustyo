@@ -5,6 +5,8 @@
  */
 package budjetointisovellus.domain;
 
+import java.util.Objects;
+
 /**
  *
  * @author aleksi
@@ -13,7 +15,37 @@ public class Kategoria {
     private int id;
     private String nimi;
     
-    Kategoria(String nimi) {
+    public Kategoria(String nimi) {
         this.nimi = nimi;
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 5;
+        hash = 79 * hash + this.id;
+        hash = 79 * hash + Objects.hashCode(this.nimi);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Kategoria other = (Kategoria) obj;
+        if (!Objects.equals(this.nimi, other.nimi)) {
+            return false;
+        }
+        return true;
+    }
+    
+    public String getNimi() {
+        return this.nimi;
     }
 }

@@ -11,6 +11,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -32,7 +34,7 @@ public class Database {
     public boolean executeQuery(String sql,List<Object> params) throws SQLException {
         PreparedStatement pstmt = conn.prepareStatement(sql);
         for(int i = 0;i < params.size();i++) {
-            pstmt.setObject(i,params.get(i));
+            pstmt.setObject(i+1,params.get(i));
         }
         return pstmt.execute();
     }
@@ -40,7 +42,7 @@ public class Database {
     public ResultSet selectQuery(String sql,List<Object> params) throws SQLException {
         PreparedStatement pstmt = conn.prepareStatement(sql);
         for(int i = 0;i < params.size();i++) {
-            pstmt.setObject(i,params.get(i));
+            pstmt.setObject(i+1,params.get(i));
         }
         return pstmt.executeQuery();
     }
@@ -50,8 +52,19 @@ public class Database {
         return pstmt.executeQuery();       
     }
     
+    public void close() throws SQLException {
+        this.conn.close();
+    }
+    
     public void init() {
-        
+        String sql = "CREATE TABLE IF NOT EXISTS category ("
+                + " id INTEGER  NOT NULL PRIMARY KEY,"
+                + " name VARCHAR(40));";
+        try {
+            this.executeQuery(sql);
+        } catch (SQLException ex) {
+            Logger.getLogger(Database.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
     
 }

@@ -1,0 +1,2 @@
+cp ui.fxml target/classes/budjetointisovellus/ui/ui.fxml
+mvn compile exec:java -Dexec.mainClass=budjetointisovellus.ui.Main

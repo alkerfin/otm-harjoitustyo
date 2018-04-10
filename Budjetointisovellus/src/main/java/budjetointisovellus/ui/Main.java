@@ -5,6 +5,9 @@
  */
 package budjetointisovellus.ui;
 import budjetointisovellus.domain.*;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.application.Application;
 
 
@@ -16,10 +19,15 @@ import javafx.application.Application;
 public class Main {
     
     public static void main(String[] args) {
-        Database db = new Database("");
-        UserInterface ui = new UserInterface();
-        ui.setDb(db);
-        Application.launch(UserInterface.class,args);
+        Database db;
+        try {
+            db = new Database("budjetointisovellus.db");
+            UserInterface ui = new UserInterface();
+            ui.setDb(db);
+            Application.launch(UserInterface.class,args);
+        } catch (SQLException ex) {
+            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+        }
         
     }
     
