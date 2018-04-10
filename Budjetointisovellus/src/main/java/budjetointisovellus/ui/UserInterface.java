@@ -29,8 +29,12 @@ public class UserInterface extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("ui.fxml"));
-    
+        
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("ui.fxml"));
+        loader.setController(new FxController(db));
+        Parent root = loader.load();
+        
         Scene scene = new Scene(root, 600, 400);
     
         stage.setTitle("Budjetointisovellus");
