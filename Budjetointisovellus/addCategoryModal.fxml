@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="156.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="15.0" layoutY="15.0" text="Nimi" />
+      <Button fx:id="btnSave" layoutX="425.0" layoutY="119.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="91.0" text="Tallenna" />
+      <Button fx:id="btnClose" layoutX="523.0" layoutY="118.0" mnemonicParsing="false" text="Sulje" />
+      <TextField fx:id="txtName" layoutX="14.0" layoutY="29.0" prefHeight="25.0" prefWidth="235.0" />
+      <ColorPicker fx:id="clrCategory" layoutX="17.0" layoutY="80.0" />
+      <Label layoutX="16.0" layoutY="62.0" text="Väri" />
+   </children>
+</AnchorPane>
