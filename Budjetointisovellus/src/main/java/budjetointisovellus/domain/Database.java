@@ -59,7 +59,14 @@ public class Database {
     public void init() {
         String sql = "CREATE TABLE IF NOT EXISTS category ("
                 + " id INTEGER  NOT NULL PRIMARY KEY,"
-                + " name VARCHAR(40));";
+                + " name VARCHAR(40));"
+		+ "CREATE TABLE IF NOT EXISTS moneyevent("
+		+ " id INTEGER NOT NULL PRIMARY KEY,"
+		+ " name VARCHAR(40),"
+		+ " amount double,"
+		+ " cat_id int,"
+		+ " eventDate Date,"
+		+ " FOREIGN KEY (cat_id) REFERENCES category(id));";
         try {
             this.executeQuery(sql);
         } catch (SQLException ex) {

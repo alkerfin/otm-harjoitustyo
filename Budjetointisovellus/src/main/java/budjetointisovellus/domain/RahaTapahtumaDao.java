@@ -16,15 +16,15 @@ import java.util.logging.Logger;
  *
  * @author aleksi
  */
-public class KategoriaDao {
+public class RahaTapahtumaDao {
     private Database db;
     
-    public KategoriaDao(Database db) {
+    public RahaTapahtumaDao(Database db) {
         this.db = db;
     }
     
-    public boolean add(Kategoria k) {
-        String sql = "INSERT INTO category (name,color) values (?,?);";
+    public boolean add(RahaTapahtuma k) {
+        String sql = "INSERT INTO moneyevent (name,color) values (?,?);";
         List<Object> params = new ArrayList<>();
         params.add(k.getNimi());
         try {
@@ -36,7 +36,7 @@ public class KategoriaDao {
     }
     
     public boolean clear() {
-        String sql = "DELETE FROM category;";
+        String sql = "DELETE FROM moneyevent;";
         try {
             return db.executeQuery(sql);
         } catch (SQLException ex) {
@@ -45,25 +45,28 @@ public class KategoriaDao {
         }
     }
     
-    public Kategoria findOneById(int id) {
-   	String sql = "SELECT * FROM category WHERE id = ? LIMIT 1";
-	List<Object> params = new ArrayList<>();
-	params.add(id);
-	try {
-		ResultSet results = db.selectQuery(sql,params);	
-		if(results.next()) {
-			Kategoria k = new Kategoria(results.getInteger("id"),results.getString("name"));
-			return k;
-		} else {
-			return null;		
-		}
-	} catch(SQLException ex) {
-		Logger.getLogger(KategoriaDao.class.getName()).log(Level.SEVERE,null,ex);
-		return null;	
-	}
+    public double getSumByMonth(Date pvm) {
     }
 
-    public List<Kategoria> findAll() {
+    public double getSumByDate(Date pvm) {
+    }
+    public List<RahaTapahtuma> findAllByDate(Date pvm) {
+        List<Kategoria> result = new ArrayList<>();
+        String sql = "SELECT * FROM category;";
+        try {
+            ResultSet results = db.selectQuery(sql);
+            while(results.next()) {
+                result.add(new Kategoria(results.getString("name")));
+            }
+            results.close();
+            return result;
+        } catch(SQLException ex) {
+            Logger.getLogger(KategoriaDao.class.getName()).log(Level.SEVERE, null, ex);
+            return null;
+        }
+    }
+
+    public List<RahaTapahtuma> findAllByMonth(Date pvm) {
         List<Kategoria> result = new ArrayList<>();
         String sql = "SELECT * FROM category;";
         try {
@@ -79,7 +82,7 @@ public class KategoriaDao {
         }
     }
     
-    public boolean update(int id,Kategoria k) {
+    public boolean update(RahaTapahtuma rt) {
         return false;
     }
     

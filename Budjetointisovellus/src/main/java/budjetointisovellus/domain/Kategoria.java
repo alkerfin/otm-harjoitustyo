@@ -19,6 +19,11 @@ public class Kategoria {
         this.nimi = nimi;
     }
 
+    public Kategoria(int id,String nimi) {
+    	this.nimi = nimi;
+	this.id = id;
+    }
+
     @Override
     public int hashCode() {
         int hash = 5;
@@ -39,7 +44,7 @@ public class Kategoria {
             return false;
         }
         final Kategoria other = (Kategoria) obj;
-        if (!Objects.equals(this.nimi, other.nimi)) {
+        if (!Objects.equals(this.id, other.id)) {
             return false;
         }
         return true;
@@ -47,5 +52,9 @@ public class Kategoria {
     
     public String getNimi() {
         return this.nimi;
+    }
+   
+    public int getId() {
+	return this.id;
     }
 }

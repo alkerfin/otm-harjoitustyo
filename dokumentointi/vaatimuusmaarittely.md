@@ -2,6 +2,7 @@
 
 ## Sovelluksen tarkoitus
 Sovelluksen avulla käyttäjä voi hallinoida omia menojaan ja tulojaan. Sovellus on yhden käyttäjän työpöytäsovellus.
+Sovelluksessa käyttäjä valitsee kuukauden tai päivän ja näkee oman menonsa ja tulonsa tämän perusteella.
 
 ## Perusversion tarjoama toiminallisuus
 	- Käyttäjä voi luoda menon tietylle kuukaudelle tietystä kategoriasta
@@ -12,6 +13,6 @@ Sovelluksen avulla käyttäjä voi hallinoida omia menojaan ja tulojaan. Sovellu
 
 
 ## Jatkokehitysideoita
-
 	- Automaattinen tulon lisäys kuukaudelle
 	- Menot ja tulot Excel-tiedostoon
+	- Tuki digitaaliselle tiliotteelle
