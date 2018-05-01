@@ -8,7 +8,7 @@ package budjetointisovellus.domain;
 import java.util.Objects;
 
 /**
- *
+ * Kategoria-luokka datan säilömiseen
  * @author aleksi
  */
 public class Kategoria {

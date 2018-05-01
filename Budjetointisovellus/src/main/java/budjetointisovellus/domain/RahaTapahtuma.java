@@ -1,22 +1,21 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
+
 package budjetointisovellus.domain;
 
+import java.util.Date;
+
 /**
- *
+ * Rahatapahtuma-luokka datan säilömiseen
  * @author aleksi
  */
-public class Rahatapahtuma {
+public class RahaTapahtuma {
     private int id;
     private String nimi;
     private Date paiva;
     private int summa;
     private Kategoria kategoria;
     
-    Meno(int id,String nimi,Date paiva,int summa,Kategoria kategoria) {
+    public RahaTapahtuma(int id,String nimi,Date paiva,int summa,Kategoria kategoria) {
         this.summa = summa;
 	this.nimi = nimi;
 	this.paiva = paiva;

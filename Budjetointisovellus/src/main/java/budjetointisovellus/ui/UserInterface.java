@@ -12,7 +12,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Group;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
 
 /**

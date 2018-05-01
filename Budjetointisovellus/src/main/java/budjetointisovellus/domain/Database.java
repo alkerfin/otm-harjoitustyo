@@ -15,22 +15,39 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- *
+ * Tietokannan hallintaan tarkoitettu luokka. 
+ * Käytä vain yhtä instanssia tästä luokasta.
  * @author aleksi
  */
 public class Database {
+
     private Connection conn;
     
-    
+    /**
+    * Constructori, joka luo tietokanta yhteyden
+    * @param String db Tietokanta tiedoston sijainti
+    */    
     public Database(String db) throws SQLException {
        this.conn = DriverManager.getConnection("jdbc:sqlite:"+db);
     }
-    
+    /**
+    * SQL-lauseen suorittaminen ilman tietojen palautusta, käytä Insert,Update,Delete-lauseille
+    * @throws SQLException jos tietokanta-yhteys ei toimi tai muu virhe
+    * @param String sql Suoritettava sql-lause
+    * @return boolean arvo sql-lauseen suorittamisen onnistumisesta
+    */
     public boolean executeQuery(String sql) throws SQLException {
         PreparedStatement pstmt = conn.prepareStatement(sql);
         return pstmt.execute();
     }
     
+    /**
+    * SQL-lauseen suorittaminen parametri listalla ilman tietojen palautusta, käytä Insert,Update,Delete-lauseille
+    * @throws SQLException jos tietokanta-yhteys ei toimi tai muu virhe
+    * @param String sql Suoritettava sql-lause
+    * @param List<Object> params SQL-lauseen parametrit
+    * @return boolean arvo sql-lauseen suorittamisen onnistumisesta
+    */
     public boolean executeQuery(String sql,List<Object> params) throws SQLException {
         PreparedStatement pstmt = conn.prepareStatement(sql);
         for(int i = 0;i < params.size();i++) {

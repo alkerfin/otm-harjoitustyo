@@ -1,19 +1,15 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package budjetointisovellus.domain;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Date;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- *
+ * Luokka tietokannan ja rahaTapahtuman yhdistämisestä
  * @author aleksi
  */
 public class RahaTapahtumaDao {
@@ -46,17 +42,20 @@ public class RahaTapahtumaDao {
     }
     
     public double getSumByMonth(Date pvm) {
+	return 0.00;
     }
 
     public double getSumByDate(Date pvm) {
+	return 0.00;
     }
+
     public List<RahaTapahtuma> findAllByDate(Date pvm) {
-        List<Kategoria> result = new ArrayList<>();
+        List<RahaTapahtuma> result = new ArrayList<>();
         String sql = "SELECT * FROM category;";
         try {
             ResultSet results = db.selectQuery(sql);
             while(results.next()) {
-                result.add(new Kategoria(results.getString("name")));
+                //result.add(new Kategoria(results.getString("name")));
             }
             results.close();
             return result;
@@ -67,12 +66,12 @@ public class RahaTapahtumaDao {
     }
 
     public List<RahaTapahtuma> findAllByMonth(Date pvm) {
-        List<Kategoria> result = new ArrayList<>();
+        List<RahaTapahtuma> result = new ArrayList<>();
         String sql = "SELECT * FROM category;";
         try {
             ResultSet results = db.selectQuery(sql);
             while(results.next()) {
-                result.add(new Kategoria(results.getString("name")));
+                //result.add(new Kategoria(results.getString("name")));
             }
             results.close();
             return result;
