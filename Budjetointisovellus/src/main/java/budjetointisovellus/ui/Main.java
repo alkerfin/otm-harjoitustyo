@@ -19,15 +19,10 @@ import javafx.application.Application;
 public class Main {
     
     public static void main(String[] args) {
-        Database db;
-        try {
-            db = new Database("budjetointisovellus.db");
+
             UserInterface ui = new UserInterface();
-            ui.setDb(db);
+           // ui.setDb(db);
             Application.launch(UserInterface.class,args);
-        } catch (SQLException ex) {
-            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
-        }
         
     }
     

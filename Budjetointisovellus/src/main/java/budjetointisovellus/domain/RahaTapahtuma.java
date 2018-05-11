@@ -12,10 +12,10 @@ public class RahaTapahtuma {
     private int id;
     private String nimi;
     private Date paiva;
-    private int summa;
+    private double summa;
     private Kategoria kategoria;
     
-    public RahaTapahtuma(int id,String nimi,Date paiva,int summa,Kategoria kategoria) {
+    public RahaTapahtuma(int id,String nimi,Date paiva,double summa,Kategoria kategoria) {
         this.summa = summa;
 	this.nimi = nimi;
 	this.paiva = paiva;
@@ -36,11 +36,11 @@ public class RahaTapahtuma {
     }
 
 
-    public int getSumma() {
+    public double getSumma() {
         return summa;
     }
 
-    public void setSumma(int summa) {
+    public void setSumma(double summa) {
         this.summa = summa;
     }
 
@@ -51,5 +51,10 @@ public class RahaTapahtuma {
     public void setKategoria(Kategoria kategoria) {
         this.kategoria = kategoria;
     }
-    
+ 
+    @Override
+    public String toString() {
+	return this.paiva+"\t\t"+this.nimi+"          "+this.summa;
+    }
+   
 }

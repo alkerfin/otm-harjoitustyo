@@ -29,6 +29,15 @@
     </dependency>
 </dependencies>
 <build>
+    <resources>
+      <resource>
+        <directory>src/resources</directory>
+        <includes>
+          <include>**/*.fxml</include>
+        </includes>
+      </resource>
+
+    </resources>
     <plugins>
         <plugin>
             <groupId>org.jacoco</groupId>

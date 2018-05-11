@@ -13,6 +13,9 @@ import javafx.scene.Group;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -20,6 +23,7 @@ import javafx.stage.Stage;
  */
 public class UserInterface extends Application {
     private Database db;
+
     
     public void setDb(Database db) {
         this.db = db;
@@ -28,11 +32,17 @@ public class UserInterface extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        
+        try {
+        	this.db = new Database("budjetointisovellus.db");
+		this.db.init();
+	} catch(SQLException ex) {
+		
+            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+	}
         FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getResource("ui.fxml"));
+        loader.setLocation(getClass().getResource("../../ui.fxml"));
         loader.setController(new FxController(db));
-        Parent root = loader.load();
+        Parent root = (Parent)loader.load(loader.getLocation().openStream());
         
         Scene scene = new Scene(root, 600, 400);
     

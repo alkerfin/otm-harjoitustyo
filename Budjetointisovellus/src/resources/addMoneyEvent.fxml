@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="198.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="15.0" layoutY="15.0" text="Nimi" />
+      <Button fx:id="btnSave" layoutX="425.0" layoutY="173.0" mnemonicParsing="false" onAction="#btnSaveClicked" prefHeight="25.0" prefWidth="91.0" text="Tallenna" />
+      <Button fx:id="btnClose" layoutX="523.0" layoutY="172.0" mnemonicParsing="false" onAction="#btnCloseClicked" text="Sulje" />
+      <TextField fx:id="txtName" layoutX="14.0" layoutY="29.0" prefHeight="25.0" prefWidth="235.0" />
+      <Label layoutX="16.0" layoutY="96.0" text="Kategoria" />
+      <ChoiceBox fx:id="cbCategory" layoutX="16.0" layoutY="113.0" prefWidth="150.0" />
+      <TextField fx:id="txtSum" layoutX="15.0" layoutY="70.0" prefHeight="25.0" prefWidth="235.0" />
+      <Label layoutX="16.0" layoutY="56.0" text="Summa" />
+      <DatePicker fx:id="selectDate" layoutX="16.0" layoutY="160.0" />
+      <Label layoutX="18.0" layoutY="141.0" text="Päivä" />
+   </children>
+</AnchorPane>

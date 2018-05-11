@@ -55,7 +55,13 @@ public class Database {
         }
         return pstmt.execute();
     }
-    
+    /**
+    * Suorittaa SQL-lauseen ja palauttaa arvot, käytä SELECT-lauseille
+    * @throws SQLException jos tietokanta-yhteys ei toimi tai muu virhe
+    * @param String sql Suoritettava SQL-lause
+    * @param List<Object> params SQL-lauseen parametrit
+    * @return ResultSet SQL-lauseen kysymät arvot
+    */
     public ResultSet selectQuery(String sql,List<Object> params) throws SQLException {
         PreparedStatement pstmt = conn.prepareStatement(sql);
         for(int i = 0;i < params.size();i++) {
@@ -63,29 +69,42 @@ public class Database {
         }
         return pstmt.executeQuery();
     }
+    /**
+    * Suorittaa SQL-lauseen ja palauttaa arvot, käytä SELECT-lauseille
+    * @throws SQLException jos tietokanta-yhteys ei toimi tai muu virhe
+    * @param String sql Suoritettava SQL-lause
+    * @return ResultSet SQL-lauseen kysymät arvot
+    */
     
     public ResultSet selectQuery(String sql) throws SQLException { 
          PreparedStatement pstmt = conn.prepareStatement(sql);
         return pstmt.executeQuery();       
     }
-    
+    /**
+    * Sulkee tietokanta-yhteyden
+    * @throws SQLException jos tietokanta-yhteys ei toimi tai muu tietokanta-virhe
+    */
     public void close() throws SQLException {
         this.conn.close();
     }
-    
+    /**
+    * Luo tietokanta-taulut ohjelmalle
+    */
     public void init() {
         String sql = "CREATE TABLE IF NOT EXISTS category ("
                 + " id INTEGER  NOT NULL PRIMARY KEY,"
-                + " name VARCHAR(40));"
-		+ "CREATE TABLE IF NOT EXISTS moneyevent("
+                + " name VARCHAR(40));";
+
+        try {
+            this.executeQuery(sql);
+		sql = "CREATE TABLE IF NOT EXISTS moneyevent("
 		+ " id INTEGER NOT NULL PRIMARY KEY,"
 		+ " name VARCHAR(40),"
 		+ " amount double,"
 		+ " cat_id int,"
-		+ " eventDate Date,"
+		+ " eventDate INTEGER,"
 		+ " FOREIGN KEY (cat_id) REFERENCES category(id));";
-        try {
-            this.executeQuery(sql);
+	     this.executeQuery(sql);
         } catch (SQLException ex) {
             Logger.getLogger(Database.class.getName()).log(Level.SEVERE, null, ex);
         }
